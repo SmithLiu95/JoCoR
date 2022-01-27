@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0 python main.py --dataset CARS --noise_type symmetric --noise_rate 0.1 --n_epoch 50 --co_lambda 0.9 --lr 1e-5 --model_type B  --noise_type symmetric

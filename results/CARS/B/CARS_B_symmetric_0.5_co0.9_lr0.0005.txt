@@ -1,0 +1,2 @@
+Namespace(co_lambda=0.9, dataset='CARS', epoch_decay_start=80, exponent=1, forget_rate=None, lr=0.0005, model_type='B', n_epoch=50, noise_rate=0.5, noise_type='symmetric', num_gradual=10, num_workers=4, print_freq=50, result_dir='results', seed=1, top_bn=False)
+iter train_acc1 train_acc2 val_p11 val_map1 val_p12 val_map2 test_acc1 test_map1 test_acc2 test_map2

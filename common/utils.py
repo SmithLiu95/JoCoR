@@ -29,3 +29,15 @@ def accuracy(logit, target, topk=(1,)):
         correct_k = correct[:k].view(-1).float().sum(0, keepdim=True)
         res.append(correct_k.mul_(100.0 / batch_size))
     return res[0]
+
+
+from ret_benchmark.data.evaluations.eval import AccuracyCalculator
+def retrieval_metric(feature, target):
+    log_info={}
+    ret_metric = AccuracyCalculator(include=("precision_at_1", "mean_average_precision_at_r"), exclude=())
+    ret_metric = ret_metric.get_accuracy(feature, feature, target, target, True)
+    mapr_curr = ret_metric['precision_at_1']
+    for k, v in ret_metric.items():
+        log_info[f"e_{k}"] = v
+    print(log_info)
+    return log_info['e_precision_at_1'],log_info['e_mean_average_precision_at_r']

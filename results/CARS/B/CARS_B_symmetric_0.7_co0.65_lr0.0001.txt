@@ -1,0 +1,2 @@
+Namespace(co_lambda=0.65, dataset='CARS', epoch_decay_start=80, exponent=1, forget_rate=None, lr=0.0001, model_type='B', n_epoch=50, noise_rate=0.7, noise_type='symmetric', num_gradual=10, num_workers=4, print_freq=50, result_dir='results', seed=1, top_bn=False)
+best epochs: 14, val_p1= 0.6014, test_p1= 0.6017, test_map= 0.1115
